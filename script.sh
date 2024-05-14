@@ -2,4 +2,3 @@
 
 echo "Yo"
 
-echo $Yo2
