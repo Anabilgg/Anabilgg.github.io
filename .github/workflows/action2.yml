@@ -6,5 +6,5 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: npm install write-good
-      - run: write-good *.md
+      - run: npm install proselint
+      - run: proselint *.md
