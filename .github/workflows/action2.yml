@@ -1,4 +1,7 @@
-on: push
+on: 
+  push:
+    paths:
+        - '**/*.md'
 
 jobs:
   verify-syntax:
@@ -7,4 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: pip install proselint
-      - run: proselint *.md
+      - run: proselint ./**/*.md
