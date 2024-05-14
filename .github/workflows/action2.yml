@@ -1,0 +1,9 @@
+on: push
+
+jobs:
+  verify-syntax:
+    runs-on: ubuntu-latest
+
+    steps:
+      uses: actions/checkout@v4
+      run: proselint *.md 
