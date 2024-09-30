@@ -1,0 +1,14 @@
+on:
+  pull_request:
+    branches:
+      - master
+
+name: "Trigger: Pull Request proselint on .md files"
+jobs:
+  proselint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+      - run: pip install proselint
+      - run: proselint *.md
